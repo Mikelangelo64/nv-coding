@@ -31,18 +31,14 @@ module.exports = {
       import: './src/scripts/video.ts',
     },
   },
-  // ['./src/index.ts', './src/scripts/animationCanvas/animationCanvas.ts'],
 
   devServer: {
-    // static: './public',
     watchFiles: path.join(__dirname, 'src'),
   },
 
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      // filename: 'index.html',
-      // chunks: ['index', 'animation'],
     }),
     new MiniCssExtractPlugin({
       filename: 'styles.css',

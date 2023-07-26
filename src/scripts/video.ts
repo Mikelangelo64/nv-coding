@@ -1,5 +1,3 @@
-// import videoSrc from '@/assets/video/bg.mp4';
-
 import vevet from './config/vevet';
 
 const videoHandler = () => {
@@ -15,8 +13,7 @@ const videoHandler = () => {
     return;
   }
 
-  // const source = document.createElement('source');
-  const source = document.querySelector('source');
+  const source = container.querySelector('source');
 
   if (!source) {
     return;
@@ -29,14 +26,10 @@ const videoHandler = () => {
   }
 
   source.src = dataSrc;
-  // source.setAttribute('type', 'video/mp4');
-
-  // video.appendChild(source);
 
   video.load();
 
   video.addEventListener('loadeddata', () => {
-    // console.log(1);
     setTimeout(() => {
       container.classList.add('loaded');
     }, 0);
